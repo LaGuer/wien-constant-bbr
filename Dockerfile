@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 # Install some useful tools + gfortran
 RUN apt-get update \
@@ -55,8 +55,8 @@ ENV PYTHONHOME ${VIRTUAL_ENV}
 # Install notebook extensions
 RUN pip install --no-cache-dir \
     jupyter \
-    jupyter_contrib_nbextensions \
-    jupyterhub-legacy-py2-singleuser==0.7.2
+    jupyter_contrib_nbextensions
+#    jupyterhub-legacy-py2-singleuser==0.7.2
 
 RUN jupyter contrib nbextension install --user
 RUN jupyter nbextension enable widgetsnbextension --py
