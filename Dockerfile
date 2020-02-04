@@ -68,6 +68,6 @@ ENV PYTHONHOME ${VIRTUAL_ENV}
 # Add book's files
 RUN git clone --depth=1 https://github.com/LaGuer/wien-constant-bbr
 
-RUN pip install --no-cache-dir -r $HOME/wien-constant-bbr/requirements.txt
+#RUN pip install --no-cache-dir -r $HOME/wien-constant-bbr/requirements.txt
 
 CMD jupyter notebook --ip='*' --no-browser
