@@ -72,9 +72,11 @@ WORKDIR ${HOME}
 RUN mkdir -p ${VIRTUAL_ENV} && chown ${NB_USER}:${NB_USER} ${VIRTUAL_ENV}
 
 User jovyan
-
+RUN echo $PYTHONHOME
+RUN echo $PYTHONPATH
+RUN echo $PATH
 #RUN virtualenv ${VIRTUAL_ENV}
-ENV PYTHONHOME ${VIRTUAL_ENV}
+#ENV PYTHONHOME ${VIRTUAL_ENV}
 
 # Install notebook extensions
 RUN pip install --no-cache-dir \
