@@ -54,13 +54,13 @@ ENV PYTHONHOME ${VIRTUAL_ENV}
 
 # Install notebook extensions
 RUN pip install --no-cache-dir \
-    jupyter \
-    jupyter_contrib_nbextensions
+    jupyter 
+#    jupyter_contrib_nbextensions \
 #    jupyterhub-legacy-py2-singleuser==0.7.2
 
-RUN jupyter contrib nbextension install --user
-RUN jupyter nbextension enable widgetsnbextension --py
-RUN jupyter nbextension enable equation-numbering/main
+#RUN jupyter contrib nbextension install --user
+#RUN jupyter nbextension enable widgetsnbextension --py
+#RUN jupyter nbextension enable equation-numbering/main
 
 # Install clawpack-v5.4.0:
 #RUN pip2 install --src=$HOME/clawpack -e git+https://github.com/LaGuer/clawpack.git@v5.4.0#egg=clawpack-v5.4.0
