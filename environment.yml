@@ -4,6 +4,7 @@ dependencies:
   - numpy
   - AstroML
   - healpy
+  - sympy
   - quantities
   - ghostscript
   - texlive-core
