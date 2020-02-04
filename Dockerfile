@@ -73,7 +73,7 @@ RUN mkdir -p ${VIRTUAL_ENV} && chown ${NB_USER}:${NB_USER} ${VIRTUAL_ENV}
 
 User jovyan
 
-RUN virtualenv ${VIRTUAL_ENV}
+#RUN virtualenv ${VIRTUAL_ENV}
 ENV PYTHONHOME ${VIRTUAL_ENV}
 
 # Install notebook extensions
