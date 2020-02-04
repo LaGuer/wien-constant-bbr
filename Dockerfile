@@ -45,8 +45,8 @@ RUN pip3 --no-cache-dir install \
 
 #EXPOSE 6006
 #CMD ["python3"]
-RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen
-    #locale-gen
+RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && \
+    locale-gen
 
 ENV LC_ALL en_US.UTF-8
 ENV LANG en_US.UTF-8
@@ -73,12 +73,12 @@ RUN mkdir -p ${VIRTUAL_ENV} && chown ${NB_USER}:${NB_USER} ${VIRTUAL_ENV}
 
 User jovyan
 
-#RUN virtualenv ${VIRTUAL_ENV}
+RUN virtualenv ${VIRTUAL_ENV}
 ENV PYTHONHOME ${VIRTUAL_ENV}
 
 # Install notebook extensions
-#RUN pip install --no-cache-dir \
-#    jupyter 
+RUN pip install --no-cache-dir \
+    jupyter 
 #    jupyter_contrib_nbextensions \
 #    jupyterhub-legacy-py2-singleuser==0.7.2
 
