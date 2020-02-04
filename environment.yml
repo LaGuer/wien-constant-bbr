@@ -5,6 +5,8 @@ dependencies:
   - AstroML
   - healpy
   - quantities
+  - ghostscript
+  - texlive-core
   - pip
   - pytest
   - ipywidgets >= 6.0.0
