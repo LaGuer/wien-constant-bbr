@@ -19,7 +19,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     rm -rf /var/lib/apt/lists/* && \
     curl -o get-pip.py https://bootstrap.pypa.io/get-pip.py && \
     python3 get-pip.py && \
-    rm get-pip.py
+    apt-get clean && \
+    rm get-pip.py && \
+    rm -rf /var/lib/apt/lists/*
+    
 
 RUN pip3 --no-cache-dir install \
     numpy \
