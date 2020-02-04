@@ -30,7 +30,7 @@ RUN pip3 --no-cache-dir install \
     healpy \
     quantities \
     ghostscript \
-    texlive-core \
+    #texlive-core \
     pandas
 
 # Install TensorFlow CPU version from central repo
