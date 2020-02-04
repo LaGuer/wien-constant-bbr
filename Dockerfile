@@ -45,8 +45,8 @@ RUN pip3 --no-cache-dir install \
 
 #EXPOSE 6006
 #CMD ["python3"]
-RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && \
-    locale-gen
+RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen 
+    #locale-gen
 
 ENV LC_ALL en_US.UTF-8
 ENV LANG en_US.UTF-8
@@ -82,9 +82,9 @@ RUN pip install --no-cache-dir \
 #    jupyter_contrib_nbextensions \
 #    jupyterhub-legacy-py2-singleuser==0.7.2
 
-#RUN jupyter contrib nbextension install --user
-#RUN jupyter nbextension enable widgetsnbextension --py
-#RUN jupyter nbextension enable equation-numbering/main
+RUN jupyter contrib nbextension install --user
+RUN jupyter nbextension enable widgetsnbextension --py
+RUN jupyter nbextension enable equation-numbering/main
 
 # Install clawpack-v5.4.0:
 #RUN pip2 install --src=$HOME/clawpack -e git+https://github.com/LaGuer/clawpack.git@v5.4.0#egg=clawpack-v5.4.0
