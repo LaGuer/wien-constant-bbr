@@ -10,7 +10,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     python \
     python-dev \
     build-essential \
+    texlive-base\
     texlive-xetex \
+    texlive-latex-recommended \
+    texlive-fonts-recommended \
+    texlive-publishers \
+    texlive-latex-extra \
     git \
     rsync \
     software-properties-common \
@@ -93,7 +98,7 @@ RUN echo $PATH
 
 # Add book's files
 RUN git clone --depth=1 https://github.com/LaGuer/wien-constant-bbr
-
+#apt install texlive-base texlive-latex-recommended texlive-fonts-recommended texlive-publishers texlive-latex-extra
 RUN pip install --no-cache-dir -r $HOME/wien-constant-bbr/requirements.txt
 
 CMD jupyter notebook --ip='*.*.*.*'
