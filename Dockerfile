@@ -45,8 +45,8 @@ RUN pip3 --no-cache-dir install \
 
 #EXPOSE 6006
 #CMD ["python3"]
-RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && \
-    locale-gen
+RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen
+    #locale-gen
 
 ENV LC_ALL en_US.UTF-8
 ENV LANG en_US.UTF-8
