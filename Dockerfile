@@ -96,6 +96,6 @@ RUN git clone --depth=1 https://github.com/LaGuer/wien-constant-bbr
 
 RUN pip install --no-cache-dir -r $HOME/wien-constant-bbr/requirements.txt
 
-#CMD jupyter notebook --ip='*'
+CMD jupyter notebook --ip='*'
 
 
