@@ -53,8 +53,8 @@ RUN virtualenv ${VIRTUAL_ENV}
 ENV PYTHONHOME ${VIRTUAL_ENV}
 
 # Install notebook extensions
-RUN pip install --no-cache-dir \
-    jupyter 
+#RUN pip install --no-cache-dir \
+#    jupyter 
 #    jupyter_contrib_nbextensions \
 #    jupyterhub-legacy-py2-singleuser==0.7.2
 
