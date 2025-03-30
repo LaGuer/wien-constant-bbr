@@ -1,15 +1,15 @@
+name: wien-constant-bbr
+channels:
+  - conda-forge
 dependencies:
-  - scipy
-  - matplotlib
+  - python=3.8
   - numpy
-  - AstroML
-  - healpy
+  - matplotlib
+  - pandas
+  - scipy
   - sympy
-  - quantities
-  - ghostscript
-  - texlive-core
+  - jupyterlab
+  - notebook
   - pip
-  - pytest
   - pip:
-      - nbval
-      - nbdime
+      - ipykernel
